@@ -1,0 +1,7 @@
+{
+  "watch": ["package.json", "src/"],
+  "ext": "js, css, json",
+  "events": {
+    "restart": "npm run build_dev"
+  }
+}

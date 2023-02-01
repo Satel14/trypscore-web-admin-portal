@@ -1,0 +1,84 @@
+{
+  "hosting": {
+    "site": "trypscore-dd-develop",
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800"
+          }
+        ]
+      }
+    ],
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/fns/dashboardUser-inviteDashboardUser",
+        "function": "dashboardUser-inviteDashboardUser"
+      },
+      {
+        "source": "/fns/dashboardUser-dbVerifyEmail",
+        "function": "dashboardUser-dbVerifyEmail"
+      },
+      {
+        "source": "/fns/dashboardUser-verifyDashUser",
+        "function": "dashboardUser-verifyDashUser"
+      },
+      {
+        "source": "/fns/dashboardUser-PassResetEmail",
+        "function": "dashboardUser-PassResetEmail"
+      },
+      {
+        "source": "/fns/admin-webPassReset",
+        "function": "admin-webPassReset"
+      },
+      {
+        "source": "/fns/dashboardUser-getDashboardUserByEmail",
+        "function": "dashboardUser-getDashboardUserByEmail"
+      },
+      {
+        "source": "/fns/dashboardUser-getUserByDashboardCompany",
+        "function": "dashboardUser-getUserByDashboardCompany"
+      },
+      {
+        "source": "/fns/dashboardUser-addDashboardUser",
+        "function": "dashboardUser-addDashboardUser"
+      },
+      {
+        "source": "/fns/dashboardUser-deleteDashboardUser",
+        "function": "dashboardUser-deleteDashboardUser"
+      },
+      {
+        "source": "/fns/dashboardUser-updateDashboardUser",
+        "function": "dashboardUser-updateDashboardUser"
+      },
+      {
+        "source": "/fns/companies-getCompanyById",
+        "function": "companies-getCompanyById"
+      },
+      {
+        "source": "/fns/dashboardUser-verifyInvite",
+        "function": "dashboardUser-verifyInvite"
+      },
+      {
+        "source": "/fns/admin-createEmailUser",
+        "function": "admin-createEmailUser"
+      },
+      {
+        "source": "/fns/admin-setCustomClaim",
+        "function": "admin-setCustomClaim"
+      },
+      {
+        "source": "/fns/admin-getUserByEmail",
+        "function": "admin-getUserByEmail"
+      },
+      {
+        "source": "/*",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

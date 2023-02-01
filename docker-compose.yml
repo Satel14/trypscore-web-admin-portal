@@ -1,0 +1,17 @@
+version: '3' 
+services:
+  client-portal:
+    stdin_open: true
+    environment:
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - FIREBASE_TOKEN=${FIREBASE_TOKEN}
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5000:5000"
+      - "9005:9005"
+    volumes:
+      - "./:/app"
+      - /app/node_modules
+      - .cache/firebase/emulators/:/app/.cache/firebase/emulators/ 

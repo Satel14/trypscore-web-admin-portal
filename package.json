@@ -1,0 +1,80 @@
+{
+  "name": "trypscore-web-admin-portal",
+  "version": "0.1.0",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.5",
+    "@mui/lab": "^5.0.0-alpha.52",
+    "@mui/material": "^5.0.4",
+    "@mui/styles": "^5.0.1",
+    "@mui/x-data-grid": "^5.2.2",
+    "@nivo/bar": "^0.79.1",
+    "@nivo/core": "^0.79.0",
+    "@nivo/line": "^0.79.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
+    "date-fns": "^2.25.0",
+    "firebase": "^9.2.0",
+    "firebase-tools": "^10.4.0",
+    "google-protobuf": "^3.19.3",
+    "mapbox-gl": "^2.9.2",
+    "query-string": "^7.1.1",
+    "react": "^17.0.2",
+    "react-csv": "^2.2.2",
+    "react-date-range": "^1.4.0",
+    "react-device-detect": "^2.2.2",
+    "react-dom": "^17.0.2",
+    "react-flippy": "^1.1.0",
+    "react-hook-form": "^7.20.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3",
+    "rxjs": "^7.5.6",
+    "web-vitals": "^1.1.2",
+    "worker-loader": "^3.0.8"
+  },
+  "scripts": {
+    "start": "firebase serve -o 0.0.0.0 --project trypscore-dev",
+    "build_dev": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lazymon": "nodemon --exec  'npm run start'",
+    "perpare": "husky install",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^8.0.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.3"
+  }
+}
